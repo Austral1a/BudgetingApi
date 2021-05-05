@@ -16,4 +16,5 @@ func NewCategoriesRoutes(categoriesController controllers.CategoriesController) 
 func (r *categoriesRoutes) Install(app *fiber.App) {
 	app.Post("/categories/create", r.categoriesController.Create)
 	app.Get("/categories/getAll", r.categoriesController.GetAll)
+	app.Post("/categories/transactions/add", r.categoriesController.AddTransaction)
 }
